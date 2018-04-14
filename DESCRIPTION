@@ -1,0 +1,23 @@
+Package: whisper
+Title: Determine language of website using multiple methodologies
+Version: 0.1
+Authors@R: person("Ben", "Weiher", email = "bweiher@protonmail.com",
+                  role = c("aut", "cre"))
+Description: A library that uses web-scraping, language processing, and present HTML indicators to determine what language a particular website is in.
+Depends:
+    R (>= 3.1.0)
+License: MIT + file LICENSE
+LazyData: true
+Imports:
+    dplyr,
+    purrr,
+    httr,
+    rvest,
+    RCurl,
+    cldr,
+    R.utils,
+    stringr,
+    stringi,
+    tibble,
+    xml2
+RoxygenNote: 6.0.1
