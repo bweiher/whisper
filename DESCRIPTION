@@ -1,12 +1,13 @@
 Package: whisper
 Title: Determine language of website using multiple methodologies
-Version: 0.1
-Authors@R: person("Ben", "Weiher", email = "bweiher@protonmail.com",
+Version: 0.2
+Authors@R: person("Ben", "Weiher", email = "bweiher@pm.me",
                   role = c("aut", "cre"))
-Description: A library that uses web-scraping, language processing, and present HTML indicators to determine what language a particular website is in.
+Description: A library that uses web-scraping, language processing, and present HTML indicators to determine what language a particular website is in. Now parallelized with furrr!
 Depends:
     R (>= 3.1.0)
 License: MIT + file LICENSE
+Encoding: UTF-8
 LazyData: true
 Imports:
     dplyr,
@@ -14,10 +15,11 @@ Imports:
     httr,
     rvest,
     RCurl,
-    cldr,
-    R.utils,
+    cld3,
+    furrr,
     stringr,
     stringi,
     tibble,
-    xml2
-RoxygenNote: 6.0.1
+    xml2,
+    future
+RoxygenNote: 6.1.0
