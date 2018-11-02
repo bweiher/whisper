@@ -113,10 +113,10 @@ get_language_url <- function(urls, show_url = TRUE, show_progress = TRUE, parall
           ) %>%
           dplyr::arrange(-prop) %>%
           dplyr::mutate(
-            second_language = lead(language),
-            second_prop = lead(prop),
-            third_language = lead(language, 2),
-            third_prop = lead(prop, 2)
+            second_language = dplyr::lead(language),
+            second_prop = dplyr::lead(prop),
+            third_language = dplyr::lead(language, 2),
+            third_prop = dplyr::lead(prop, 2)
           ) %>%
           dplyr::rename(first_language = language, first_prop = prop) %>%
           dplyr::select(
